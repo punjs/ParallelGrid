@@ -29,51 +29,61 @@ public class TestCaseA  {
 		{
 			if(browser.equalsIgnoreCase("chrome"))
 			{
-			ChromeOptions options = new ChromeOptions();
+			//ChromeOptions options = new ChromeOptions();
 			
-			options.setCapability(CapabilityType.BROWSER_NAME, "chrome");
-			options.setCapability(CapabilityType.PLATFORM_NAME,Platform.WINDOWS);
-			options.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT,true);
-			capabilities = DesiredCapabilities.chrome();
-			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-			//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+				capabilities =DesiredCapabilities.chrome();	
+				
+			capabilities.setBrowserName("chrome");
+			capabilities.setPlatform(Platform.WIN10);
+			capabilities.setJavascriptEnabled(true);
+			
+			
+			
+			//options.setCapability(CapabilityType.BROWSER_NAME, "chrome");
+			//options.setCapability(CapabilityType.PLATFORM_NAME,Platform.WINDOWS);
+			//options.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT,true);
+			//capabilities = DesiredCapabilities.chrome();
+			//capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+			//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
 				
 			}
 			
 			
 			if(browser.equalsIgnoreCase("firefox"))
 			{
-			FirefoxOptions options = new FirefoxOptions();
+				capabilities =DesiredCapabilities.firefox();	
+			//FirefoxOptions options = new FirefoxOptions();
+			capabilities.setBrowserName("firefox");
+			capabilities.setPlatform(Platform.WIN10);
+			capabilities.setJavascriptEnabled(true);
 			
-			options.setCapability(CapabilityType.BROWSER_NAME, "firefox");
-			options.setCapability(CapabilityType.PLATFORM_NAME,Platform.WINDOWS);
-			capabilities = DesiredCapabilities.chrome();
-			capabilities.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);
+			//options.setCapability(CapabilityType.BROWSER_NAME, "firefox");
+			//options.setCapability(CapabilityType.PLATFORM_NAME,Platform.WINDOWS);
+			//capabilities = DesiredCapabilities.chrome();
+			//capabilities.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);
 			//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);	
 			}
 			
 			if(browser.equalsIgnoreCase("Edge"))
 			{
-				EdgeOptions options = new EdgeOptions();
-			
-				//capabilities = DesiredCapabilities.edge();
-				//capabilities.setBrowserName("MicrosoftEdge");
-				//capabilities.setPlatform(Platform.WIN10);
-				//capabilities.setPlatform(Platform.WIN10);
+				capabilities = DesiredCapabilities.edge();
+				capabilities.setBrowserName("MicrosoftEdge");
+				capabilities.setPlatform(Platform.WIN10);
+				capabilities.setPlatform(Platform.WIN10);
 				//capabilities.setBrowserName(BrowserType.EDGE);
 				//capabilities.setVersion("17.17134");
 				
 				
-			options.setCapability(CapabilityType.BROWSER_NAME, "Edge");
-			options.setCapability(CapabilityType.PLATFORM_NAME,Platform.WINDOWS);
+			//options.setCapability(CapabilityType.BROWSER_NAME, "Edge");
+			//options.setCapability(CapabilityType.PLATFORM_NAME,Platform.WINDOWS);
 			//capabilities = DesiredCapabilities.edge();
 			//capabilities.setCapability(EdgeOptions., options);
-			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+			//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
 				
 			}
 			
-			driver = new RemoteWebDriver(new URL("http:localhost:4444/wd/hub"), capabilities);
-			
+			//driver = new RemoteWebDriver(new URL("http:localhost:4444/wd/hub"), capabilities);
+			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
 		}
 		
 

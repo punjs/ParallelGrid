@@ -7,16 +7,16 @@
       <class name="com.ParallelGrid.testcases.TestCaseA"/>
     </classes>
     </test>
-    <test name="TestB">
+    <test name="TestA">
     <parameter name="browser" value="Edge" /> 
     <classes>
-    <class name="com.ParallelGrid.testcases.TestCaseB"/>
+    <class name="com.ParallelGrid.testcases.TestCaseA"/>
     </classes>
     </test>
     <test name="TestC">
     <parameter name="browser" value="firefox" />
     <classes>  
-      <class name="com.ParallelGrid.testcases.TestCaseC"/> 
+      <class name="com.ParallelGrid.testcases.TestCaseA"/> 
     </classes> 
   </test> <!-- Test -->
 </suite> <!-- Suite -->
