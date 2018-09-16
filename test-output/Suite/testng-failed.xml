@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <test name="TestB(failed)" parallel="tests">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="com.ParallelGrid.testcases.TestCaseA">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ParallelGrid.testcases.TestCaseA -->
+      <class name="com.ParallelGrid.testcases.TestCaseC">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.ParallelGrid.testcases.TestCaseC -->
+      <class name="com.ParallelGrid.testcases.TestCaseB">
+        <methods>
+          <include name="setup"/>
+          <include name="SecondTc"/>
+          <include name="ThirdTc"/>
+          <include name="FirstTc"/>
+        </methods>
+      </class> <!-- com.ParallelGrid.testcases.TestCaseB -->
+    </classes>
+  </test> <!-- TestB(failed) -->
+</suite> <!-- Failed suite [Suite] -->
